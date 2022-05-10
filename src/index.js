@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -20,9 +19,8 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/dashboard" element={<Dashboard />} />
-      <Route path="/resume-builder" element={<Resume />}>
+      <Route path="/resume-builder" element={<Resume />} />
       <Route path="/" element={<Logout />}>
-        <Route path=":postSlug" element={<Post />} />
       </Route>
     </Routes>
     <Footer />
