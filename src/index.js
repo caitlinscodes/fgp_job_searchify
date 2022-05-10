@@ -20,7 +20,7 @@ ReactDOM.render(
       <Route path="/" element={<Home />} />
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/resume-builder" element={<Resume />} />
-      <Route path="/" element={<Logout />}>
+      <Route path="/logout" element={<Logout />}>
       </Route>
     </Routes>
     <Footer />

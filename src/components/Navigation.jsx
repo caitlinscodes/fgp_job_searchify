@@ -28,7 +28,7 @@ function Navigation() {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/Logout">
+                <NavLink className="nav-link" to="/logout">
                   Logout
                 </NavLink>
               </li>
