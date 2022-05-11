@@ -8,9 +8,10 @@ import {
   Navigation,
   Footer,
   Home,
-  Dashboard,
+  JobSearch,
   Resume,
   Logout,
+  JobResultList,
 } from "./components";
 
 ReactDOM.render(
@@ -18,10 +19,10 @@ ReactDOM.render(
     <Navigation />
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/jobsearch" element={<JobSearch />} />
+      <Route path="/jobresultlist" element={<JobResultList />} />
       <Route path="/resume-builder" element={<Resume />} />
-      <Route path="/logout" element={<Logout />}>
-      </Route>
+      <Route path="/logout" element={<Logout />}></Route>
     </Routes>
     <Footer />
   </Router>,
