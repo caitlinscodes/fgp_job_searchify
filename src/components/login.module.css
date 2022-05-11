@@ -1,0 +1,72 @@
+.container {
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  border-radius: 20px;
+  width: 20rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+}
+
+.cardHeader {
+  margin-bottom: 20px;
+  width: 80%;
+  border: none;
+  display: flex;
+  justify-content: center;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.loginField {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;  
+}
+
+.input {
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.password {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px; 
+  margin-bottom: 30%;
+}
+
+.btnDiv {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+#loginBtn {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.switchBtn {
+  background-color: white;
+  border: none;
+}
+
+.switchBtn:hover {
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}

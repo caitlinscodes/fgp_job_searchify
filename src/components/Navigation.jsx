@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom";
 
 function Navigation() {
   return (
-    <div className="navigation">
-      <nav className="navbar navbar-expand navbar-dark bg-dark">
+    <div className="navigation fixed-top">
+      <nav className="navbar navbar-expand navbar-dark">
         <div className="container">
           <NavLink className="navbar-brand" to="/">
             JOB.searchify()

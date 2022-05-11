@@ -13,6 +13,8 @@ import {
   Logout,
   JobResultList,
 } from "./components";
+import Login from './components/Login.jsx';
+import Signup from './components/Signup';
 
 ReactDOM.render(
   <Router>
@@ -22,7 +24,10 @@ ReactDOM.render(
       <Route path="/jobsearch" element={<JobSearch />} />
       <Route path="/jobresultlist" element={<JobResultList />} />
       <Route path="/resume-builder" element={<Resume />} />
-      <Route path="/logout" element={<Logout />}></Route>
+      <Route path="/logout" element={<Logout />}/>
+      <Route path="/login" element={<Login />}/>
+      <Route path="/signup" element={<Signup />}>
+      </Route>
     </Routes>
     <Footer />
   </Router>,
