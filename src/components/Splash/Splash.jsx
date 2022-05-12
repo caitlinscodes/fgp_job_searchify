@@ -1,20 +1,25 @@
 import React from  "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
-//import Type from "./Type";
-import Logo from "../../assets/job.searchify_logo.png"
+// import Type from "./Type";
+import Logo from "../../assets/job.searchify_logo2.png";
+import JJohnson from "../../assets/jj_profile.png";
+import MJackson from "../../assets/mj_profile.png";
+import IArabejo from "../../assets/ia_profile.png";
+import CStev from "../../assets/cs_profile.png";
+
 
 function Splash() {
   return (
     <section>
       <Container fluid className="splash-page" id="splash">
-        {/* <Particle />  What does this do???*/}
         <Container fluid className="splash-main">
           <Row>
+            {/* <h1>JOB.searchify(</h1><Type /><h1>)</h1> */}
             <img src={Logo} alt="JOB.searchify logo" className="img-fluid" />
-            {/* <Type /> */}
+            
           </Row>
         </Container>
-
+        <br></br>
         <Container fluid className="splash-description">
           <Row>
             <Col><img src="https://via.placeholder.com/200" alt="placeholder image"/></Col>
@@ -31,34 +36,35 @@ function Splash() {
             <Col><img src="https://via.placeholder.com/200" alt="placeholder image"/></Col>
           </Row>
         </Container>
-
+        <br></br>
         <Container fluid className="splash-about">
           <h3>About the Creators</h3>
           <Row>
             <Col>
-              <img src="https://via.placeholder.com/100" alt="placeholder image"/>
-              <h5>Johnathan Andila</h5>
-              <p>Lorem ipsum dolor sit amet. Sed debitis distinctio ab maxime repellat sit ipsa galisum id similique. </p>
-            </Col>
-            <Col>
-              <img src="https://via.placeholder.com/100" alt="placeholder image"/>
+              <img src={IArabejo} alt="placeholder image"/>
               <h5>Inna Arabejo</h5>
-              <p>Lorem ipsum dolor sit amet. Sed debitis distinctio ab maxime repellat sit ipsa galisum id similique. </p>
+              <p>My name is Inna Arabejo, and I am an aspiring full stack developer versed in building projects from the ground up with a primary focus on MERN Stack web applications. </p>
             </Col>
             <Col>
-              <img src="https://via.placeholder.com/100" alt="placeholder image"/>
+              <img src={MJackson} alt="placeholder image"/>
               <h5>Matt Jackson</h5>
-              <p>Lorem ipsum dolor sit amet. Sed debitis distinctio ab maxime repellat sit ipsa galisum id similique. </p>
+              <p>Web Developer Currently enrolled at SMU Boot Camp </p>
             </Col>
             <Col>
-              <img src="https://via.placeholder.com/100" alt="placeholder image"/>
+              <img src={JJohnson} alt="Jonathan Johnson"/>
+              <h5>Johnathan Johnson</h5>
+              <p>Passionate about writing clean, readable, and reusable code? Interested in building frontend and backend web applications, I also dibble and dabble in robotics. </p>
+            </Col>
+            <Col>
+              <img src={CStev} alt="placeholder image"/>
               <h5>Caitlin Stevenson</h5>
-              <p>Lorem ipsum dolor sit amet. Sed debitis distinctio ab maxime repellat sit ipsa galisum id similique. </p>
+              <p>Howdy! I am an experienced professional transitioning into the web development field. </p>
             </Col>
           </Row>
         </Container>
-
+        <br></br>
         <Container fluid className="splash-contact">
+          <h3>Contact Us</h3>
           <Row>
           <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">
