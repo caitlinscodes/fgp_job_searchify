@@ -1,3 +1,4 @@
 const Sample = require('./Sample');
+const User = require('./User');
 
-module.exports = { Sample };
+module.exports = { Sample, User };
