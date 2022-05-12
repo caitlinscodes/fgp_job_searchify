@@ -1,6 +1,6 @@
 import React from  "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
-// import ThemeProvider from "react-bootstrap/ThemeProvider";
+import ThemeProvider from "react-bootstrap/ThemeProvider";
 // import Type from "./Type";
 import Logo from "../../assets/job.searchify_logo2.png";
 import JJohnson from "../../assets/jj_profile.png";
@@ -11,7 +11,7 @@ import CStev from "../../assets/cs_profile.png";
 
 function Splash() {
   return (
-    // <ThemeProvider breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']}>
+    <ThemeProvider>
     <section className="splash-container">
       <Container fluid className="splash-page" id="splash">
         <Container fluid className="splash-main">
@@ -95,7 +95,7 @@ function Splash() {
         </Container>
       </Container>
     </section>
-    // </ThemeProvider>
+    </ThemeProvider>
   );
 }
 
