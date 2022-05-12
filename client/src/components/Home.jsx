@@ -6,10 +6,7 @@ function Home() {
     <div className="home">
       <div class="container">
         <div class="row align-items-center my-5">
-          
-          <div class="col-lg-5">
             <Splash />
-          </div>
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-const bcrypt = require('bcrypt');
+// const bcrypt = require('bcrypt');
 
 const userSchema = new Schema({
   username: {
@@ -18,7 +18,7 @@ const userSchema = new Schema({
     type: String,
     required: true,
     validate: {
-      len: [6]
+      len: [10]
     }
   },
 
