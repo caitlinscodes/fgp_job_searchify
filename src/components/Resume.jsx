@@ -1,9 +1,11 @@
 // import { useState} from "react";
-import React from "react";
+import React, { useState } from 'react';
+import DatePicker from 'react-date-picker';
 
 
 
 function Resume() {
+  const [value, onChange] = useState(new Date());
   // const [ resume, setResume ] = useState({})
 
   // const getInfo = () => {
@@ -49,17 +51,60 @@ function Resume() {
               <div class="topic-text">Build Your Resume!</div>
               <p>Fill in the form to generate your resume into a PDF.</p>
               <form action="https://formspree.io/f/xnqwlaaj" method="POST">
-                <label class="input-box">Enter your name
+                <label class="input-box">Name
                   <input type="text" name="name" />
                 </label>
-                <label class="input-box">Enter your email
+                <label class="input-box">Email
                   <input type="text" name="email" />
+                </label>
+                <label class="input-box">Phone
+                  <input type="text" name="phone" />
                 </label>
                 <label class="input-box">Address
                   <input type="text" name="address" />
                 </label>
-                <label class="input-box">Address 2
-                  <input class="form-control" rows="5" name="address 2"></input>
+                <label class="input-box">City, State, Zip
+                  <input type="text" name="location" />
+                </label>
+                <hr/>
+                <label class="input-box">Summary/Brand Statement
+                  <textarea class="form-control" rows="5" name="summary"></textarea>
+                </label>
+                <hr/>
+                <div class="input-box">Work Experience 1</div>
+                  <label class="input-box">Title
+                    <input type="text" name="title" />
+                  </label>
+                  <div class="dates">
+                    <DatePicker onChange={onChange} value={value} />
+                  </div>
+                    <textarea class="form-control" rows="5" name="experience" placeholder="Description">
+                  </textarea>
+                <hr/>
+                <div class="input-box">Work Experience 2</div>
+                  <label class="input-box">Title
+                    <input type="text" name="title" />
+                  </label>
+                  <div class="dates">
+                    <DatePicker onChange={onChange} value={value} />
+                  </div>
+                    <textarea class="form-control" rows="5" name="experience" placeholder="Description">
+                  </textarea>
+                <hr/>
+                <div class="input-box">Work Experience 3</div>
+                  <label class="input-box">Title
+                    <input type="text" name="title" />
+                  </label>
+                  <div class="dates">
+                    <DatePicker onChange={onChange} value={value} />
+                  </div>
+                    <textarea class="form-control" rows="5" name="experience" placeholder="Description">
+                  </textarea>
+                <hr/>
+                <label class="input-box">Skills
+                  <textarea class="form-control" rows="2" name="skills" placeholder="Include soft and hard skills">
+
+                  </textarea>
                 </label>
                 <div>
                   <input class="button" type="button" value="Download PDF" />

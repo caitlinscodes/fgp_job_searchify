@@ -27,7 +27,7 @@ a:hover {
   background-color: #104e70;
 }
 
-
+/* Resume Builder */
 .container .content{
   margin: 3%;
   display: flex;
@@ -35,44 +35,7 @@ a:hover {
   justify-content: space-between;
   margin-top: 10%;
 }
-.container .content .left-side{
-  width: 25%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 15px;
-  position: relative;
-}
-.content .left-side::before{
-  content: '';
-  position: absolute;
-  height: 70%;
-  width: 2px;
-  right: -15px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #afafb6;
-}
-.content .left-side .details{
-  margin: 14px;
-  text-align: center;
-}
-.content .left-side .details i{
-  font-size: 30px;
-  color: #0072bb;
-  margin-bottom: 10px;
-}
-.content .left-side .details .topic{
-  font-size: 18px;
-  font-weight: 500;
-}
-.content .left-side .details .text-one,
-.content .left-side .details .text-two{
-  font-size: 18px;
-  color: #68686d;
-}
+
 .container .content .right-side{
   width: 75%;
   margin-left: 75px;
@@ -99,15 +62,17 @@ a:hover {
   padding: 0 15px;
   resize: none;
 }
-.right-side .message-box{
-  min-height: 110px;
-}
 .right-side .input-box.form-control {
   padding-top: 6px;
+}
+.dates {
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 .right-side input.button{
   display: inline-block;
   margin-top: 5%;
+  margin-bottom: 10%;
 }
 .right-side input.button[type="button"]{
   color: #fff;
