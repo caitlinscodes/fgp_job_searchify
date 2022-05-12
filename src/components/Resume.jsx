@@ -44,11 +44,10 @@ function Resume() {
   return (
     <div className="resume">
       <div class="container">
-        {/* <h1 class="font-weight-heavy">Resume</h1> */}
           <div class="content">
           
             <div class="right-side">
-              <div class="topic-text">Build Your Resume!</div>
+              <h1 class="topic-text">Build Your Resume!</h1>
               <p>Fill in the form to generate your resume into a PDF.</p>
               <form action="https://formspree.io/f/xnqwlaaj" method="POST">
                 <label class="input-box">Name
@@ -71,39 +70,54 @@ function Resume() {
                   <textarea class="form-control" rows="5" name="summary"></textarea>
                 </label>
                 <hr/>
+                <label class="input-box">Skills
+                  <textarea class="form-control" rows="2" name="skills" placeholder="Include soft and hard skills">
+                  </textarea>
+                </label>
+                <hr/>
                 <div class="input-box">Work Experience 1</div>
-                  <label class="input-box">Title
-                    <input type="text" name="title" />
+                  <label class="input-box">
+                    <input type="text" name="title" placeholder="Title"/>
                   </label>
                   <div class="dates">
                     <DatePicker onChange={onChange} value={value} />
+                    <DatePicker onChange={onChange} value={value} />
                   </div>
-                    <textarea class="form-control" rows="5" name="experience" placeholder="Description">
+                  <textarea class="form-control" rows="5" name="experience" placeholder="Description">
                   </textarea>
                 <hr/>
                 <div class="input-box">Work Experience 2</div>
-                  <label class="input-box">Title
-                    <input type="text" name="title" />
+                  <label class="input-box">
+                    <input type="text" name="title" placeholder="Title"/>
                   </label>
                   <div class="dates">
+                    <DatePicker onChange={onChange} value={value} />
                     <DatePicker onChange={onChange} value={value} />
                   </div>
                     <textarea class="form-control" rows="5" name="experience" placeholder="Description">
                   </textarea>
                 <hr/>
                 <div class="input-box">Work Experience 3</div>
-                  <label class="input-box">Title
-                    <input type="text" name="title" />
+                  <label class="input-box">
+                    <input type="text" name="title" placeholder="Title"/>
                   </label>
                   <div class="dates">
+                    <DatePicker onChange={onChange} value={value} />
                     <DatePicker onChange={onChange} value={value} />
                   </div>
                     <textarea class="form-control" rows="5" name="experience" placeholder="Description">
                   </textarea>
                 <hr/>
-                <label class="input-box">Skills
-                  <textarea class="form-control" rows="2" name="skills" placeholder="Include soft and hard skills">
-
+                <div class="input-box">Education</div>
+                  <label class="input-box">
+                    <input type="text" name="degree" placeholder="Degree"/>
+                  </label>
+                  <label class="input-box">
+                    <input type="text" name="major" placeholder="Major"/>
+                  </label>
+                <hr/>
+                <label class="input-box">Certifications/Achievements
+                  <textarea class="form-control" rows="2" name="certification">
                   </textarea>
                 </label>
                 <div>
