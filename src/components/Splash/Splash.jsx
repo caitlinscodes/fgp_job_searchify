@@ -1,6 +1,6 @@
 import React from  "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import Type from "./Type";
+//import Type from "./Type";
 import Logo from "../../assets/job.searchify_logo.png"
 
 function Splash() {
@@ -11,7 +11,7 @@ function Splash() {
         <Container fluid className="splash-main">
           <Row>
             <img src={Logo} alt="JOB.searchify logo" className="img-fluid" />
-            <Type />
+            {/* <Type /> */}
           </Row>
         </Container>
 
@@ -38,22 +38,22 @@ function Splash() {
             <Col>
               <img src="https://via.placeholder.com/100" alt="placeholder image"/>
               <h5>Johnathan Andila</h5>
-              <p>Lorem ipsum dolor sit amet. Sed debitis distinctio ab maxime repellat sit ipsa galisum id similique voluptatem qui quia  aut officia  ut nobis facere? Non omnis nostrum At dignissimos omnis est labore nesciunt sit iste totam. Rem debitis quia non doloremque temporibus sit libero facere sit quam labore vel pariatur odio. </p>
+              <p>Lorem ipsum dolor sit amet. Sed debitis distinctio ab maxime repellat sit ipsa galisum id similique. </p>
             </Col>
             <Col>
               <img src="https://via.placeholder.com/100" alt="placeholder image"/>
               <h5>Inna Arabejo</h5>
-              <p>Lorem ipsum dolor sit amet. Sed debitis distinctio ab maxime repellat sit ipsa galisum id similique voluptatem qui quia  aut officia  ut nobis facere? Non omnis nostrum At dignissimos omnis est labore nesciunt sit iste totam. Rem debitis quia non doloremque temporibus sit libero facere sit quam labore vel pariatur odio. </p>
+              <p>Lorem ipsum dolor sit amet. Sed debitis distinctio ab maxime repellat sit ipsa galisum id similique. </p>
             </Col>
             <Col>
               <img src="https://via.placeholder.com/100" alt="placeholder image"/>
               <h5>Matt Jackson</h5>
-              <p>Lorem ipsum dolor sit amet. Sed debitis distinctio ab maxime repellat sit ipsa galisum id similique voluptatem qui quia  aut officia  ut nobis facere? Non omnis nostrum At dignissimos omnis est labore nesciunt sit iste totam. Rem debitis quia non doloremque temporibus sit libero facere sit quam labore vel pariatur odio. </p>
+              <p>Lorem ipsum dolor sit amet. Sed debitis distinctio ab maxime repellat sit ipsa galisum id similique. </p>
             </Col>
             <Col>
               <img src="https://via.placeholder.com/100" alt="placeholder image"/>
               <h5>Caitlin Stevenson</h5>
-              <p>Lorem ipsum dolor sit amet. Sed debitis distinctio ab maxime repellat sit ipsa galisum id similique voluptatem qui quia  aut officia  ut nobis facere? Non omnis nostrum At dignissimos omnis est labore nesciunt sit iste totam. Rem debitis quia non doloremque temporibus sit libero facere sit quam labore vel pariatur odio. </p>
+              <p>Lorem ipsum dolor sit amet. Sed debitis distinctio ab maxime repellat sit ipsa galisum id similique. </p>
             </Col>
           </Row>
         </Container>
