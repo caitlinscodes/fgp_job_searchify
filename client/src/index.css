@@ -128,3 +128,15 @@ input.button[type="button"]:hover{
 footer {
   background-color: #104e70;
 }
+
+/* Splash Page */
+.home {
+  background-color: #104e70;
+  color: white;
+}
+
+.splash-contact {
+  background-color: #ffc500;
+  color: black;
+  padding: 30px;
+}
