@@ -7,14 +7,16 @@ import JJohnson from "../../assets/jj_profile.png";
 import MJackson from "../../assets/mj_profile.png";
 import IArabejo from "../../assets/ia_profile.png";
 import CStev from "../../assets/cs_profile.png";
+import JobSearch from "../../assets/jobSearch_img.png";
+import Resume from "../../assets/resume_img.png";
 
 
 function Splash() {
   return (
     <ThemeProvider>
     <section className="splash-container">
-      <Container fluid className="splash-page" id="splash">
-        <Container fluid className="splash-main">
+      <Container className="splash-page" id="splash">
+        <Container className="splash-main">
           <Row>
             {/* <h1>JOB.searchify(</h1><Type /><h1>)</h1> */}
             <img src={Logo} alt="JOB.searchify logo" className="img-fluid" />
@@ -22,24 +24,25 @@ function Splash() {
           </Row>
         </Container>
         <br></br>
-        <Container fluid className="splash-description">
+        <Container className="splash-description">
           <Row>
-            <Col><img src="https://via.placeholder.com/200" alt="placeholder image"/></Col>
+            <Col><img src={JobSearch} alt="computer image"/></Col>
             <Col>
               <h3>Job Search Functionality</h3>
               <p>Lorem ipsum dolor sit amet. Sed debitis distinctio ab maxime repellat sit ipsa galisum id similique voluptatem qui quia  aut officia  ut nobis facere? Non omnis nostrum At dignissimos omnis est labore nesciunt sit iste totam. Rem debitis quia non doloremque temporibus sit libero facere sit quam labore vel pariatur odio. </p>
             </Col>
           </Row>
+          <br></br>
           <Row>
             <Col>
               <h3>Resume Builder Functionality</h3>
               <p>Lorem ipsum dolor sit amet. Sed debitis distinctio ab maxime repellat sit ipsa galisum id similique voluptatem qui quia  aut officia  ut nobis facere? Non omnis nostrum At dignissimos omnis est labore nesciunt sit iste totam. Rem debitis quia non doloremque temporibus sit libero facere sit quam labore vel pariatur odio. </p>
             </Col>
-            <Col><img src="https://via.placeholder.com/200" alt="placeholder image"/></Col>
+            <Col><img src={Resume} alt="resume image"/></Col>
           </Row>
         </Container>
         <br></br>
-        <Container fluid className="splash-about">
+        <Container className="splash-about">
           <h3>About the Creators</h3>
           <Row>
             <Col>
@@ -65,7 +68,7 @@ function Splash() {
           </Row>
         </Container>
         <br></br>
-        <Container fluid className="splash-contact">
+        <Container className="splash-contact">
           <h3>Contact Us</h3>
           <Row>
           <Col>
