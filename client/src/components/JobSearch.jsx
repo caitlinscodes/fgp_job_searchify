@@ -1,80 +1,65 @@
-import { useState, useEffect } from 'react';
-import React from 'react'
-import { Form, Col } from "react-bootstrap";
-import JobResultList from './JobResultList';
+import { useState } from "react";
+import React from "react";
+import JobSearchForm from "./JobSearchForm";
+import JobResultList from "./JobResultList";
 import joblist from "../joblist.json";
-
 
 //Import our search methods
 // import search from '../utils/API';
-console.log('I am rendering');
 
+/*
+   Create a parent component that contains both the search form and the results area
+   Manage state here  
+   Pass the state and the state setters into the other components 
+*/
 
+// Search the json data for whatever the searchJob is
+// And set searchResults to whatever the result is
 const JobSearch = () => {
-  const [ searchTerm, setSearchTerm ] = useState('')
-  const [ searchResults, setSearchResults ] = useState([])
+  const [searchByJob, setSearchByJob] = useState("");
+  const [searchByLocation, setSearchByLocation] = useState("");
+  const [results, setResults] = useState([]);
 
-  // Search the json data for whatever the searchTerm is 
-  // And set searchResults to whatever the result is
-  const searchData = () => {
-    console.log(searchTerm)
-    // search the json data for whatever the user is looking for
-    // use array.filter()
-    // use setSearchResults()
-  }
-
-  // Method to get search results and set state
-  // const searchJobs = async (query) => {
-  //     const response = await search(query);
-  //     setResults(response.data.data);
-  // };
-
-
-  // We want to run this method when the component first loads so that we have data for jobs to display to the page
+  // We want to run the useEffect method when the component first loads so that we have data for jobs to display to the page
   //The second argument is the dependency array. this means this method will onlyrun when the compent first loads
+
+  const searchData = (e) => {
+    e.preventDefault();
+
+    const searchResult = joblist.filter(
+      (job) =>
+        job.job_title === searchByJob || job.location === searchByLocation
+    );
+
+    console.log(searchResult);
+    setResults(searchResult);
+  };
 
   return (
     <div className="dashboard">
-      <div class="container">
-        <div class="row align-items-center my-5">
-          <div class="col-lg-5">
-            <h1 class="font-weight-light">Job Search</h1>
-            {/* Pass our results to the jobResultList component to map over  */}
-            <div>
-              <input
-                type="text"
-                placeholder="Search..."
-                onChange={(event) => {
-                  setSearchTerm(event.target.value);
-                }}
-              />
-              {/* {JSONDATA.filter((val) => {
-                  if (searchTerm == "") {
-                    return val
-                  } else if (val.Company.toLowerCase().includes(searchTerm.toLowerCase())){
-                    return val
-                  }
-                }).map((val, key) => {
-                  return <div className="user" key={key}> <p>{val.Company}</p></div>
-                })} */}
-              <button onClick={searchData}>Search</button>
-            </div>
+      <h1 className="font-weight-light">Job Search</h1>
+      <div className="container">
+        <div className="row align-items-center my-5">
 
-            {searchResults.length > 0 && (
-              <div>
-                <JobResultList results={searchResults} />
-              </div>
-            )}
+          {/* Search bar for Job and Location */}
+          <JobSearchForm
+            searchByJob={searchByJob}
+            searchByLocation={searchByLocation}
+            setSearchByJob={setSearchByJob}
+            setSearchByLocation={setSearchByLocation}
+            searchData={searchData}
+          />
+          {/* Pass our results From JobSearchForm to the JobResultList component to map over  */}
 
-            {/* <JobResultList results={results} /> */}
-          </div>
+          {results.length === 0 ? (
+            <div>No Results Found for your Search</div>
+          ) : (
+            <JobResultList results={results} />
+          )}
         </div>
       </div>
     </div>
   );
-
 };
-
-
 
 export default JobSearch;
