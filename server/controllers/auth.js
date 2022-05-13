@@ -1,3 +1,4 @@
+const jwt = require('jsonwebtoken')
 const User = require('../models/User')
 
 exports.register = async (req, res, next) => {
@@ -17,10 +18,8 @@ exports.register = async (req, res, next) => {
     const user = await User.create({
       username, email, password
     });
-    res.status(201).json({
-      success: true,
-      user
-    })
+
+    return (sendToken(user, 201, res))
   } catch (err) {
     console.log(err)
     res.status(500).json({
@@ -50,11 +49,17 @@ exports.login = async (req, res, next) => {
       return (res.status(404).json({success: false, error: "nah bro try again"}))
     }
 
-    return res.status(200).json({
-      success: true,
-      token: "fh82fhdgj3"
-    });
+    return (sendToken(user, 200, res));
   } catch (err) {
     console.log(err)
+    res.status(500).json({
+      success: false,
+      error: err.message
+    })
   }
 };
+
+const sendToken = (user, statusCode, res) => {
+  const token = user.getSignedToken()
+  res.status(statusCode).json({success: true, token})
+}
