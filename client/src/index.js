@@ -22,7 +22,7 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/jobsearch" element={<JobSearch />} />
-      <Route path="/jobresultlist" element={<JobResultList />} />
+     
       <Route path="/resume-builder" element={<Resume />} />
       <Route path="/logout" element={<Logout />}/>
       <Route path="/login" element={<Login />}/>
