@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/job.searchifyDB", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/jobSearchifyDB", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
