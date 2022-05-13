@@ -12,13 +12,13 @@ const PDF = (props) => {
         <p>{props.phone}</p>
         <p>{props.address}</p>
         <p>{props.city}</p>
-        <p>{props.state}</p>
+        {/* <p>{props.state}</p>
         <p>{props.zip}</p>
         <textarea>{props.summary}</textarea>
-        <p>{props.title}</p>
-        <p>{props.company}</p>
+        <p>{props.title}</p> */}
+        {/* <p>{props.company}</p>
         <textarea>{props.experience}</textarea>
-        <textarea>{props.skills}</textarea>
+        <textarea>{props.skills}</textarea> */}
       </div>
       <Pdf targetRef={ref} filename="post.pdf">
         {({ toPdf }) => <button onClick={toPdf}>Download as Resume</button>}

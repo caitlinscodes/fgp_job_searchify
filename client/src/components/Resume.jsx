@@ -8,13 +8,13 @@ class Resume extends Component {
       phone: '',
       address: '',
       city: '',
-      state: '',
-      zip: '',
-      summary: ``,
-      title: '',
-      company: '',
-      experience: '',
-      skills: ``,
+      // state: '',
+      // zip: '',
+      // summary: ``,
+      // title: '',
+      // company: '',
+      // experience: '',
+      // skills: ``,
       postSubmitted: false
   }
 
@@ -26,7 +26,7 @@ class Resume extends Component {
 
   submitPost = (e) => {
       
-      if(!this.state.name || !this.state.email || !this.state.phone || !this.state.address || !this.state.city || !this.state.state || !this.state.phone ){
+      if(!this.state.name || !this.state.email || !this.state.phone || !this.state.address || !this.state.city ){
           alert('All fields are required!');
           e.preventDefault();
       }else{
@@ -61,6 +61,14 @@ class Resume extends Component {
                                                 <input onChange={this.onChange('phone')} className="form-control" name="phone" placeholder="Phone Number" rows="7"></input>
                                             </div>
                                             <div className="form-group">
+                                                <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon"></i></span>
+                                                <input onChange={this.onChange('address')} className="form-control" name="address" placeholder="Address" ></input>
+                                            </div>
+                                            <div className="form-group">
+                                                <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon"></i></span>
+                                                <input onChange={this.onChange('city')} className="form-control" name="city" placeholder="City" ></input>
+                                            </div>
+                                            <div className="form-group">
                                                 <button type="button" onClick={this.submitPost} className="btn btn-primary btn-lg">Submit</button>
                                             </div>
                                         </fieldset>
@@ -70,7 +78,7 @@ class Resume extends Component {
                         </div>
                     </div>
                 </div>) : (
-                    <PDF title={this.state.title} content={this.state.content} image={this.state.image} />
+                    <PDF name={this.state.name} email={this.state.email} phone={this.state.phone} address={this.state.address} city={this.state.city} />
                 )
             }
         </>
