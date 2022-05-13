@@ -2,6 +2,7 @@ import { useState } from "react";
 import React from "react";
 import JobSearchForm from "./JobSearchForm";
 import JobResultList from "./JobResultList";
+
 import joblist from "../joblist.json";
 
 //Import our search methods
