@@ -28,12 +28,17 @@ const JobSearch = () => {
 
     const searchResult = joblist.filter(
       (job) =>
-        job.job_title === searchByJob || job.location === searchByLocation
+        job.job_title.toLowerCase().includes(searchByJob.toLowerCase()) || job.location.toLowerCase().includes(searchByLocation.toLowerCase())
     );
-
+/*
+job_title = SpongeBob
+searchByJob = sponge or pon or 
+*/
     console.log(searchResult);
     setResults(searchResult);
   };
+
+  // **TO DO**  Need to add a use effect to our smart component that will fetch the job data and set it to the state
 
   return (
     <div className="dashboard">
