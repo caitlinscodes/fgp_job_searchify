@@ -6,11 +6,13 @@
   "scripts": {
     "start": "nodemon server.js",
     "seed": "node seeds/seed.js",
+    "seedjobs": "node seeds/job-seed.js",
     "watch": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "dotenv": "^16.0.0",
     "express": "^4.17.1",
     "mongoose": "^6.3.3"
