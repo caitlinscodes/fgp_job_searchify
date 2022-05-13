@@ -46,22 +46,25 @@ searchByJob = sponge or pon or
       <h1 className="font-weight-light">Job Search</h1>
       <div className="container">
         <div className="row align-items-center my-5">
+          <div className="col-lg-5">
+            <h1 className="font-weight-light">Job Search</h1>
 
-          {/* Search bar for Job and Location */}
-          <JobSearchForm
-            searchByJob={searchByJob}
-            searchByLocation={searchByLocation}
-            setSearchByJob={setSearchByJob}
-            setSearchByLocation={setSearchByLocation}
-            searchData={searchData}
-          />
-          {/* Pass our results From JobSearchForm to the JobResultList component to map over  */}
+            {/* Search bar for Job and Location */}
+            <JobSearchForm
+              searchByJob={searchByJob}
+              searchByLocation={searchByLocation}
+              setSearchByJob={setSearchByJob}
+              setSearchByLocation={setSearchByLocation}
+              searchData={searchData}
+            />
+            {/* Pass our results From JobSearchForm to the JobResultList component to map over  */}
 
-          {results.length === 0 ? (
-            <div>No Results Found for your Search</div>
-          ) : (
-            <JobResultList results={results} />
-          )}
+            {results.length === 0 ? (
+              <div>No Results Found for your Search</div>
+            ) : (
+              <JobResultList results={results} />
+            )}
+          </div>
         </div>
       </div>
     </div>

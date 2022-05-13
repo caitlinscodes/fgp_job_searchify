@@ -44,14 +44,6 @@ const JobSearchForm = ( props ) => {
               </InputGroup>
             </Col>
             <Col xs="auto">
-              <Form.Check
-                type="checkbox"
-                id="autoSizingCheck"
-                className="mb-2"
-                label="Remember me"
-              />
-            </Col>
-            <Col xs="auto">
               <Button type="submit" className="mb-2" onClick={props.searchData}>
                 Submit
               </Button>
