@@ -10,14 +10,11 @@ const userSchema = new Schema({
     type: String,
     required: true,
     unique: true,
-    validate: {
-      isEmail: true
-    }
+
   },
   password: {
     type: String,
     required: true,
-    minlength: 6
   },
 
 });
@@ -30,5 +27,5 @@ userSchema.pre('save', async function() {
   next();
 });
 
-const User = model('User', userSchema);
+const User = model('user', userSchema);
 module.exports = User;
