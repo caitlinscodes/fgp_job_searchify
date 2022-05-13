@@ -8,7 +8,7 @@ const JobResultList = (props) => {
   return (
     <>
       {props.results.map((job) => (
-        <Card key={job.id} className="text-center">
+        <Card key={job._id} className="text-center">
           <Card.Header>
             <h5>Company</h5>
             {job.company}
