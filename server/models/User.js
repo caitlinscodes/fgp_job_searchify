@@ -10,19 +10,15 @@ const userSchema = new Schema({
     type: String,
     required: true,
     unique: true,
-    validate: {
-      isEmail: true
-    }
+
   },
   password: {
     type: String,
     required: true,
-    validate: {
-      len: [10]
-    }
+
   },
 
 });
 
-const User = model('Sample', sampleSchema);
+const User = model('user', userSchema);
 module.exports = User;
