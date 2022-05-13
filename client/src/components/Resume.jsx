@@ -1,153 +1,83 @@
-// import { useState} from "react";
-import React, { useState } from 'react';
-import DatePicker from 'react-date-picker';
+import React, { Component } from 'react';
+import PDF from './PDF';
 
+class Resume extends Component {
+  state = {
+      name: '',
+      email: '',
+      phone: '',
+      address: '',
+      city: '',
+      state: '',
+      zip: '',
+      summary: ``,
+      title: '',
+      company: '',
+      experience: '',
+      skills: ``,
+      postSubmitted: false
+  }
 
+  onChange = input => e => {
+      this.setState({
+          [input]: e.target.value
+      });
+  }
 
-function Resume() {
-  const [value, onChange] = useState(new Date());
-  // const [ resume, setResume ] = useState({})
-
-  // const getInfo = () => {
-
-  // }
-  /*
-  _id
-  Name
-  Address
-  Address2
-  City
-  State
-  Zip
-  Phone 
-  Email
-
-  Summary (string)
-
-  Work Experience: array
-     Title
-     Dates They Worked There
-     Description 
-
-  Skills: array of strings
-
-
-*/
-
-  /*
-  Get ReactPDF to work with a component that renders static content
-  See if it works with dynamic content
-  See if it works after you do an api call
-  */
-
-
-  return (
-    <div className="resume">
-      <div class="container">
-          <div class="content">
-          
-            <div class="right-side">
-              <h1 class="topic-text">Build Your Resume!</h1>
-              <p>Fill in the form to generate your resume into a PDF.</p>
-              <form action="https://formspree.io/f/xnqwlaaj" method="POST">
-                <label class="input-box">Name
-                  <input type="text" name="name" />
-                </label>
-                <label class="input-box">Email
-                  <input type="text" name="email" />
-                </label>
-                <label class="input-box">Phone
-                  <input type="text" name="phone" />
-                </label>
-                <label class="input-box">Address
-                  <input type="text" name="address" />
-                </label>
-                <label class="input-box">City, State, Zip
-                  <input type="text" name="location" />
-                </label>
-                <hr/>
-                <label class="input-box">Summary/Brand Statement
-                  <textarea class="form-control" rows="5" name="summary"></textarea>
-                </label>
-                <hr/>
-                <label class="input-box">Skills
-                  <textarea class="form-control" rows="2" name="skills" placeholder="Include soft and hard skills">
-                  </textarea>
-                </label>
-                <hr/>
-                <div class="input-box">Work Experience 1</div>
-                  <label class="input-box">
-                    <input type="text" name="title" placeholder="Title"/>
-                  </label>
-                  <div class="dates">
-                    <DatePicker onChange={onChange} value={value} />
-                    <DatePicker onChange={onChange} value={value} />
-                  </div>
-                  <textarea class="form-control" rows="5" name="experience" placeholder="Description">
-                  </textarea>
-                <hr/>
-                <div class="input-box">Work Experience 2</div>
-                  <label class="input-box">
-                    <input type="text" name="title" placeholder="Title"/>
-                  </label>
-                  <div class="dates">
-                    <DatePicker onChange={onChange} value={value} />
-                    <DatePicker onChange={onChange} value={value} />
-                  </div>
-                    <textarea class="form-control" rows="5" name="experience" placeholder="Description">
-                  </textarea>
-                <hr/>
-                <div class="input-box">Work Experience 3</div>
-                  <label class="input-box">
-                    <input type="text" name="title" placeholder="Title"/>
-                  </label>
-                  <div class="dates">
-                    <DatePicker onChange={onChange} value={value} />
-                    <DatePicker onChange={onChange} value={value} />
-                  </div>
-                    <textarea class="form-control" rows="5" name="experience" placeholder="Description">
-                  </textarea>
-                <hr/>
-                <div class="input-box">Education</div>
-                  <label class="input-box">
-                    <input type="text" name="degree" placeholder="Degree"/>
-                  </label>
-                  <label class="input-box">
-                    <input type="text" name="major" placeholder="Major"/>
-                  </label>
-                <hr/>
-                <label class="input-box">Certifications/Achievements
-                  <textarea class="form-control" rows="2" name="certification">
-                  </textarea>
-                </label>
-                <div>
-                  <input class="button" type="button" value="Download PDF" />
-                </div>
-                <div id="status" role="alert">
-                </div>
-              </form>
-            </div>
-            </div>
-        {/* <div class="row align-items-center my-5">
-          
-          <div class="col-lg-5">
-            <h1 class="font-weight-light">Resume</h1> */}
-
-            {/* <h3>{ resume.firstname }</h3>
-
-            { resume.experience.map( item=> (
-              <ExperinceBlock {...item} />
-            ))}
-
-            <ul>
-            { resume.skills.map( skill => (
-              <li>{skill}</li>
-            ))}
-            </ul> */}
-
-      </div>
-    </div>
-  );
+  submitPost = (e) => {
+      
+      if(!this.state.name || !this.state.email || !this.state.phone || !this.state.address || !this.state.city || !this.state.state || !this.state.phone ){
+          alert('All fields are required!');
+          e.preventDefault();
+      }else{
+          this.setState({
+              postSubmitted: true
+          });
+      }
+  }
+  render(){
+    return(
+        <>
+            {  !this.state.postSubmitted ? 
+                (<div className="container">
+                    <div className="jumbotron mt-3">
+                        <div className="row">
+                            <div className="col-md-12">
+                                <div className="well well-sm">
+                                    <form className="form-horizontal" method="post">
+                                        <fieldset>
+                                            <legend className="text-center header">Build Your Resume!</legend>
+                                            <div className="form-group">
+                                                <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-user bigicon"></i></span>
+                                                <input onChange={this.onChange('name')} name="name" type="text" placeholder="Full Name" className="form-control" />
+                                            </div>
+                                            
+                                            <div className="form-group">
+                                                <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon"></i></span>
+                                                <input onChange={this.onChange('email')} className="form-control" name="email" placeholder="Email" ></input>
+                                            </div>
+                                            <div className="form-group">
+                                                <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon"></i></span>
+                                                <input onChange={this.onChange('phone')} className="form-control" name="phone" placeholder="Phone Number" rows="7"></input>
+                                            </div>
+                                            <div className="form-group">
+                                                <button type="button" onClick={this.submitPost} className="btn btn-primary btn-lg">Submit</button>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>) : (
+                    <PDF title={this.state.title} content={this.state.content} image={this.state.image} />
+                )
+            }
+        </>
+    );
 }
+}
+
+  
 
 export default Resume;

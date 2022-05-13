@@ -27,8 +27,20 @@ a:hover {
   background-color: #104e70;
 }
 
+
 /* Resume Builder */
-.container .content{
+.App {
+  text-align: center;
+}
+
+.Post{
+  max-width: 800px;
+  width: 100%;
+  display: table;
+  margin: 0 auto;
+  padding: 20px 50px;
+}
+/* .container .content{
   margin: 3%;
   display: flex;
   align-items: center;
@@ -67,7 +79,6 @@ a:hover {
   padding-top: 6px;
 }
 .dates {
-  /* margin-top: 10px; */
   margin-bottom: 10px;
 }
 .right-side input.button{
@@ -122,7 +133,7 @@ input.button[type="button"]:hover{
     opacity: 0;
     pointer-events: none;
   }
-}
+} */
 
 /* Footer */
 footer {
