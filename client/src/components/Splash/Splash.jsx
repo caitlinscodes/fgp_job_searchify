@@ -28,15 +28,15 @@ function Splash() {
           <Row>
             <Col><img src={JobSearch} alt="computer image"/></Col>
             <Col>
-              <h3>Job Search Functionality</h3>
-              <p>Lorem ipsum dolor sit amet. Sed debitis distinctio ab maxime repellat sit ipsa galisum id similique voluptatem qui quia  aut officia  ut nobis facere? Non omnis nostrum At dignissimos omnis est labore nesciunt sit iste totam. Rem debitis quia non doloremque temporibus sit libero facere sit quam labore vel pariatur odio. </p>
+              <h3>Find Your Next Tech Job</h3>
+              <p>Looking for a career in tech but don't know where to start? Our tech industry job search platform is your one stop shop for your next job search. Our user friendly search engine weeds through thousands of postings to bring you the best tech jobs around. Happy Job Hunting!</p>
             </Col>
           </Row>
           <br></br>
           <Row>
             <Col>
-              <h3>Resume Builder Functionality</h3>
-              <p>Lorem ipsum dolor sit amet. Sed debitis distinctio ab maxime repellat sit ipsa galisum id similique voluptatem qui quia  aut officia  ut nobis facere? Non omnis nostrum At dignissimos omnis est labore nesciunt sit iste totam. Rem debitis quia non doloremque temporibus sit libero facere sit quam labore vel pariatur odio. </p>
+              <h3>Build the Perfect Resume</h3>
+              <p>Crafting a resume can be time consuming and confusing, but with our built in Resume Builder you'll have a professional CV ready in minutes. Put your best foot forward in the job application process and create an account with us to start building your resume today!</p>
             </Col>
             <Col><img src={Resume} alt="resume image"/></Col>
           </Row>
