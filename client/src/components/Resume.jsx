@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, useState, useEffect} from 'react';
+import {useNavigate} from "react-router-dom";
+import axios from "axios"
 import PDF from './PDF';
 
 class Resume extends Component {
