@@ -16,6 +16,7 @@ import {
   Login,
   Signup
 } from "./components";
+import PrivateRoute from "./components/private-route"
 
 ReactDOM.render(
   <Router>

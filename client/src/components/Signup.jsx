@@ -1,12 +1,11 @@
 import React, {useState} from "react";
 import axios from "axios";
-import { Navigate } from "react-router";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import LoginCss from "./login.module.css";
 
 function Signup() {
 
-  const navigate = Navigate
+  let navigate = useNavigate()
 
   const [username, setUsername]= useState("");
   const [email, setEmail]= useState("");
@@ -37,15 +36,13 @@ function Signup() {
 
       localStorage.setItem("authToken", data.token);
 
-      navigate.push("/Home");
-
+      navigate("/dashboard", {replace: true})
     } catch (error) {
       setError(error.response.data.error);
       setTimeout(() => {
         setError("")
       }, 5000)
     }
-
   }
 
   return (

@@ -33,12 +33,12 @@ function Navigation() {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/Login">
+                <NavLink className="nav-link" to="/login">
                   Login
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/Signup">
+                <NavLink className="nav-link" to="/signup">
                   Signup
                 </NavLink>
               </li>
