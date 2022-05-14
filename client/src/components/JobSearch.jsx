@@ -27,17 +27,37 @@ const JobSearch = () => {
 
   const searchData = (e) => {
     e.preventDefault();
-
+    console.log(searchByJob, searchByLocation)
     const searchResult = allResults.filter(
-      (job) =>
-        job.job_title.toLowerCase().includes(searchByJob.toLowerCase()) || job.location.toLowerCase().includes(searchByLocation.toLowerCase())
+      (job) => {
+        console.log(
+          job.job_title,
+          searchByJob,
+          job.location,
+          searchByLocation,
+          searchByJob.length > 0 && searchByLocation.length > 0
+        );
+        return searchByJob.length > 0 && searchByLocation.length > 0
+          ? (searchByJob.length > 0
+            ? job.job_title.toLowerCase().includes(searchByJob.toLowerCase())
+            : false && searchByLocation.length > 0
+            ? job.location
+                .toLowerCase()
+                .includes(searchByLocation.toLowerCase())
+            : false)
+          : (searchByJob.length > 0
+          ? job.job_title.toLowerCase().includes(searchByJob.toLowerCase())
+          : false || searchByLocation.length > 0
+          ? job.location.toLowerCase().includes(searchByLocation.toLowerCase())
+          : false);
+      }
     );
-/*
-job_title = SpongeBob
-searchByJob = sponge or pon or 
-*/
+    /*
+    job_title = SpongeBob
+    searchByJob = sponge or pon or 
+    */
     console.log(searchResult);
-    setAllResults(searchResult);
+    setFilteredResults(searchResult);
   };
 
   useEffect(() => {
@@ -45,7 +65,7 @@ searchByJob = sponge or pon or
       console.log(response.data)
       // all results set on page load---we will never mutate this data again
       setAllResults(response.data);
-      setFilteredResults(response.data)
+      //  setFilteredResults(response.data)
     })
   }, []);
 
