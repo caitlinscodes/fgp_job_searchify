@@ -12,9 +12,11 @@ import {
   Resume,
   Logout,
   JobResultList,
+  Dashboard,
+  Login,
+  Signup
 } from "./components";
-import Login from './components/Login.jsx';
-import Signup from './components/Signup';
+import PrivateRoute from "./components/private-route"
 
 ReactDOM.render(
   <Router>
@@ -22,11 +24,12 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/jobsearch" element={<JobSearch />} />
-     
+      <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/resume-builder" element={<Resume />} />
       <Route path="/logout" element={<Logout />}/>
       <Route path="/login" element={<Login />}/>
       <Route path="/signup" element={<Signup />}>
+        
       </Route>
     </Routes>
     <Footer />
