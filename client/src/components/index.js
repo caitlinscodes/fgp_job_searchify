@@ -5,3 +5,6 @@ export { default as JobSearch } from "./JobSearch";
 export { default as JobResultList } from "./JobResultList";
 export { default as Resume } from "./Resume";
 export { default as Logout } from "./Logout";
+export { default as Login } from "./Login";
+export { default as Signup } from "./Signup";
+export { default as Dashboard } from "./Dashboard";

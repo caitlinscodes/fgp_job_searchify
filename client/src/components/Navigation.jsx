@@ -32,6 +32,16 @@ function Navigation() {
                   Logout
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/Login">
+                  Login
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/Signup">
+                  Signup
+                </NavLink>
+              </li>
             </ul>
           </div>
         </div>
