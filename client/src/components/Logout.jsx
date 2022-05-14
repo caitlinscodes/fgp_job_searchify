@@ -1,9 +1,12 @@
 import React from "react";
+import {useNavigate} from "react-router-dom";
 
 function Logout() {
 
+  let navigate = useNavigate()
   const logoutHandler = () => {
     localStorage.removeItem("authToken")
+    navigate("/", {replace: true})
   }
 
   return (

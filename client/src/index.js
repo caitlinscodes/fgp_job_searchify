@@ -17,7 +17,6 @@ import {
   Signup
 } from "./components";
 
-
 ReactDOM.render(
   <Router>
     <Navigation />
