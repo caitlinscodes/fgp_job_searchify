@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const db = require('mongoose');
 const User = require('../models/User')
 
 // mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/job.searchifyDB", {
@@ -38,5 +38,5 @@ const seedUserDB = async () => {
 }
 
 seedUserDB().then(() => {
-  mongoose.connection.close();
+  db.close();
 })
