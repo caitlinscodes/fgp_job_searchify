@@ -28,7 +28,6 @@ class Resume extends Component {
   submitResume = (e) => {
       
       if(!this.state.name || !this.state.email || !this.state.phone || !this.state.address || !this.state.location || !this.state.summary || !this.state.skills || !this.state.title1 || !this.state.company1 || !this.state.experience1 || !this.state.title2 || !this.state.company2 || !this.state.experience2 ){
-          alert('All fields are required!');
           e.preventDefault();
       }else{
           this.setState({
@@ -70,7 +69,7 @@ class Resume extends Component {
                                             </div>
                                             <hr/>
                                             <div className="form-group">
-                                                <span className="text-center"><i className="fa fa-user bigicon"></i></span>
+                                                <span className="col-md-1 col-md-offset-2 text-center"></span>
                                                 <input onChange={this.onChange('summary')} className="form-control" type="text" name="summary" placeholder="Summary" rows={5}/>
                                             </div>
                                             <hr/>
@@ -78,6 +77,7 @@ class Resume extends Component {
                                                 <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon"></i></span>
                                                 <input onChange={this.onChange('skills')} className="form-control" type="text" name="skills" placeholder="Soft and Hard Skills" rows={3}/>
                                             </div>
+                                            <hr/>
                                             <div className="form-group">
                                                 <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon"></i></span>
                                                 <input onChange={this.onChange('title1')} className="form-control" type="text" name="title1" placeholder="Title"/>
@@ -90,6 +90,7 @@ class Resume extends Component {
                                                 <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon"></i></span>
                                                 <input onChange={this.onChange('experience1')} className="form-control" type="text" name="experience1" placeholder="Experience" rows={5}></input>
                                             </div>
+                                            <hr/>
                                             <div className="form-group">
                                                 <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-pencil-square-o bigicon"></i></span>
                                                 <input onChange={this.onChange('title2')} className="form-control" type="text" name="title2" placeholder="Title"/>
