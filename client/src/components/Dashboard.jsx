@@ -35,6 +35,7 @@ function Dashboard() {
 
   const logoutHandler = () => {
     localStorage.removeItem("authToken")
+    navigate("/", {replace: true})
   }
 
   return (
