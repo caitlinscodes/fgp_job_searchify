@@ -1,7 +1,9 @@
 import React from  "react";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Container, Row, Col } from "react-bootstrap";
 import ThemeProvider from "react-bootstrap/ThemeProvider";
 // import Type from "./Type";
+import ContactForm from "./ContactForm";
 import Logo from "../../assets/job.searchify_logo2.png";
 import JJohnson from "../../assets/jj_profile.png";
 import MJackson from "../../assets/mj_profile.png";
@@ -9,7 +11,6 @@ import IArabejo from "../../assets/ia_profile.png";
 import CStev from "../../assets/cs_profile.png";
 import JobSearch from "../../assets/jobSearch_img.png";
 import Resume from "../../assets/resume_img.png";
-
 
 function Splash() {
   return (
@@ -68,34 +69,15 @@ function Splash() {
           </Row>
         </Container>
         <br></br>
-        <Container className="splash-contact">
-          <h3>Contact Us</h3>
-          <Row>
-          <Col>
-          <Form>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" />
-              <Form.Text className="text-muted">
-                We'll never share your email with anyone else.
-              </Form.Text>
-            </Form.Group>
+          {/* Router to call in Contact Form
+          <Router>
+            <Routes>
+              <Route path="/" element={<ContactForm />} />
+            </Routes>
+          </Router> */}
 
-            <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-              <Form.Label>What's on your mind?</Form.Label>
-              <Form.Control as="textarea" rows={3} />
-            </Form.Group>
+        <ContactForm />
 
-            <Form.Group className="mb-3" controlId="formBasicCheckbox">
-              <Form.Check type="checkbox" label="Subscribe to our Newsletter!" />
-            </Form.Group>
-            <Button variant="primary" type="submit">
-              Submit
-            </Button>
-          </Form>
-          </Col>
-          </Row>
-        </Container>
       </Container>
     </section>
     </ThemeProvider>
