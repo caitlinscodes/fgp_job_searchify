@@ -10,7 +10,7 @@ function Logout() {
   }
 
   return (
-    <div className="home">
+    <div className="logout">
       <div className="container">
         <div className="row align-items-center my-5">
           

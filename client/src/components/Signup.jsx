@@ -46,6 +46,7 @@ function Signup() {
   }
 
   return (
+    <div className="signup">
     <div className={LoginCss.container}>
       <div className={LoginCss.card} id={LoginCss.signupCard}>
         <div className={LoginCss.cardHeader}>
@@ -99,6 +100,7 @@ function Signup() {
           <button id="switchToLogin" className={LoginCss.switchBtn}><Link to="/Login">Or Login</Link></button>
         </form>
       </div>
+    </div>
     </div>
   );
 }

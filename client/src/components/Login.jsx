@@ -37,6 +37,7 @@ function Login() {
   }
 
   return (
+    <div className="login">
     <div className={LoginCss.container}>
       <div className={LoginCss.card} id={LoginCss.loginCard}>
         <div className={LoginCss.cardHeader}>
@@ -70,6 +71,7 @@ function Login() {
           <button id={LoginCss.switchToSignUp} className={LoginCss.switchBtn}><Link to="/Signup">Or Sign Up</Link></button>
         </form>
       </div>
+    </div>
     </div>
   );
 }

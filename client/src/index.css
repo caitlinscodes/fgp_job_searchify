@@ -46,6 +46,8 @@ a:hover {
 }
 .resume-builder {
   margin: 5% 20%;
+  background-color: #104e70;
+  color: white;
 }
 legend {
   color: #0072bb;
@@ -68,4 +70,32 @@ footer {
   background-color: #ffc500;
   color: black;
   padding: 30px;
+}
+
+/* Job Search */
+.dashboard {
+  background-color: #104e70;
+  color: white;
+}
+.search-form-results {
+  background-color: #104e70;
+  color: black;
+}
+
+/* Logout */
+.logout {
+  background-color: #104e70;
+  color: white;
+}
+
+/* Login */
+.login {
+  background-color: #104e70;
+  color: white;
+}
+
+/* Signup */
+.signup {
+  background-color: #104e70;
+  color: white;
 }
