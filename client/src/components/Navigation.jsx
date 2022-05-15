@@ -1,7 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import NavAuthBtn from "./NavAuthBtn"
 
 function Navigation() {
+
   return (
     <div className="navigation fixed-top">
       <nav className="navbar navbar-expand navbar-dark">
@@ -22,26 +24,7 @@ function Navigation() {
                   Job Search
                 </NavLink>
               </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/resume-builder">
-                  Resume Builder
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/logout">
-                  Logout
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/login">
-                  Login
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/signup">
-                  Signup
-                </NavLink>
-              </li>
+              <NavAuthBtn></NavAuthBtn>
             </ul>
           </div>
         </div>

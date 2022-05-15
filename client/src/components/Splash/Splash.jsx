@@ -27,7 +27,7 @@ function Splash() {
         <br></br>
         <Container className="splash-description">
           <Row>
-            <Col><img src={JobSearch} alt="computer image"/></Col>
+            <Col><img src={JobSearch} alt="computer"/></Col>
             <Col>
               <h3>Find Your Next Tech Job</h3>
               <p>Looking for a career in tech but don't know where to start? Our tech industry job search platform is your one stop shop for your next job search. Our user friendly search engine weeds through thousands of postings to bring you the best tech jobs around. Happy Job Hunting!</p>
@@ -39,7 +39,7 @@ function Splash() {
               <h3>Build the Perfect Resume</h3>
               <p>Crafting a resume can be time consuming and confusing, but with our built in Resume Builder you'll have a professional CV ready in minutes. Put your best foot forward in the job application process and create an account with us to start building your resume today!</p>
             </Col>
-            <Col><img src={Resume} alt="resume image"/></Col>
+            <Col><img src={Resume} alt="resume"/></Col>
           </Row>
         </Container>
         <br></br>
@@ -47,12 +47,12 @@ function Splash() {
           <h3>About the Creators</h3>
           <Row>
             <Col>
-              <img src={IArabejo} alt="placeholder image"/>
+              <img src={IArabejo} alt="Inna Profile"/>
               <h5>Inna Arabejo</h5>
               <p>My name is Inna Arabejo, and I am an aspiring full stack developer versed in building projects from the ground up with a primary focus on MERN Stack web applications. </p>
             </Col>
             <Col>
-              <img src={MJackson} alt="placeholder image"/>
+              <img src={MJackson} alt="Matt Profile"/>
               <h5>Matt Jackson</h5>
               <p>Web Developer Currently enrolled at SMU Boot Camp </p>
             </Col>
@@ -62,7 +62,7 @@ function Splash() {
               <p>Passionate about writing clean, readable, and reusable code? Interested in building frontend and backend web applications, I also dibble and dabble in robotics. </p>
             </Col>
             <Col>
-              <img src={CStev} alt="placeholder image"/>
+              <img src={CStev} alt="Caitlin Profile"/>
               <h5>Caitlin Stevenson</h5>
               <p>Howdy! I am an experienced professional transitioning into the web development field. </p>
             </Col>
