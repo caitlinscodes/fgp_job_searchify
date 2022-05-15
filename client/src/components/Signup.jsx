@@ -36,7 +36,7 @@ function Signup() {
 
       localStorage.setItem("authToken", data.token);
 
-      navigate("/dashboard", {replace: true})
+      navigate("/", {replace: true})
     } catch (error) {
       setError(error.response.data.error);
       setTimeout(() => {

@@ -27,6 +27,14 @@ a:hover {
   background-color: #104e70;
 }
 
+.logoutBtn {
+  background-color: #104e70;
+  border: none
+}
+
+.logoutBtn:focus {
+  outline: none
+}
 
 /* Resume Builder */
 .Resume{
@@ -80,12 +88,6 @@ footer {
 .search-form-results {
   background-color: #104e70;
   color: black;
-}
-
-/* Logout */
-.logout {
-  background-color: #104e70;
-  color: white;
 }
 
 /* Login */
