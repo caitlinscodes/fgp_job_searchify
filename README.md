@@ -74,7 +74,7 @@ Bootstrap/React-Bootstrap
 
 ## Links 
 
-- [Heroku](insert heroku link here)
+- [Heroku](https://job-searchify-app.herokuapp.com/)
 
 - [GitHub](https://github.com/caitlinscodes/fgp_job_searchify)
 
