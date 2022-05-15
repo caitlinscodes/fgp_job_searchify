@@ -89,15 +89,6 @@ footer {
   background-color: #104e70;
   color: black;
 }
-
-/* Login */
-.login {
-  background-color: #104e70;
-  color: white;
-}
-
-/* Signup */
-.signup {
-  background-color: #104e70;
+.prompt {
   color: white;
 }
