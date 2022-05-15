@@ -24,9 +24,7 @@ function Login() {
 
       localStorage.setItem("authToken", data.token);
 
-      console.log(localStorage.getItem("authToken"))
-
-      navigate("/dashboard", {replace: true})
+      navigate("/", {replace: true})
     } catch (error) {
       setError(error.response.data.error);
       setTimeout(() => {
