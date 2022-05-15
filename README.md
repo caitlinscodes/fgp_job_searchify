@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# Group 1 Project 3: JOB.searchify()
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+JOB.searchify() is a job search engine and resume builder geared towards the tech industry.
 
-### `npm start`
+-   [Synopsis](#Synopsis)
+-   [Installation](#Installation)
+-   [Contributions](#Contributions)
+-   [Usage](#Usage)
+-   [Links](#Links)
+-   [License](#License)
+-   [Questions](#Questions)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Synopsis
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Our team was inpsired by the turning point we are entering in our web development career. Following the completion of our bootcamp we will step out into the tech world looking for a place to land hoping to successfully use the skills we have learned and continue to learn as we grow in our new positions. We wanted to provide a tool that would help in the process of finding and preparing for the perfect job.
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To get started, fork this repo into a text editor, then install the node package into your repo using the command line.
 
-### `npm run build`
+```bash
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Once completed, open the main repo file titled `fgp_job_searchify` in the command line by right-clilcking and selecting '*Open in Integrated Terminal*' and enter the following:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Run seed first to implement data into the database..
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+node seeds/job-seed.js
+```
+Then launch the program using the below command..
 
-### `npm run eject`
+```bash
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Technology
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+MongoDB
+HTML, CSS, Vanilla.js, jQuery
+Express.js
+Node.js (various packages)
+React (various packages)
+MongoDB/Mongoose
+Bootstrap/React-Bootstrap
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Contributions
 
-## Learn More
+- Inna Arabejo
+    - [@inna-arabejo](https://github.com/inna-arabejo)
+- Matt Jackson
+    - [@Matt4292](https://github.com/Matt4292)
+- Jonathan Johnson
+    - [@jayBassMan](https://github.com/jayBassMan)
+- Caitlin Stevenson
+    - [@caitlinscodes](https://github.com/caitlinscodes)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Usage
 
-### Code Splitting
+<img src="./assets/webpage1.png" width= 500px alt="splash page" />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<img src="./assets/webpage2.png" width= 500px alt="job search" />
 
-### Analyzing the Bundle Size
+<img src="./assets/webpage3.png" width= 500px alt="login" />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<img src="./assets/webpage4.png" width= 500px alt="resume builder" />
 
-### Making a Progressive Web App
+## Links 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- [Heroku](insert heroku link here)
 
-### Advanced Configuration
+- [GitHub](https://github.com/caitlinscodes/fgp_job_searchify)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+MIT License
 
-### `npm run build` fails to minify
+Copyright (c) 2022 Dev Wulf, Caitlin Stevenson, Neema Velasco, Emily Vazquez
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

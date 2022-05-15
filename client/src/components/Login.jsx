@@ -1,4 +1,6 @@
 import React, {useState} from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import ThemeProvider from "react-bootstrap/ThemeProvider";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import LoginCss from "./login.module.css";
@@ -35,6 +37,7 @@ function Login() {
   }
 
   return (
+    <div className="login">
     <div className={LoginCss.container}>
       <div className={LoginCss.card} id={LoginCss.loginCard}>
         <div className={LoginCss.cardHeader}>
@@ -68,6 +71,7 @@ function Login() {
           <button id={LoginCss.switchToSignUp} className={LoginCss.switchBtn}><Link to="/Signup">Or Sign Up</Link></button>
         </form>
       </div>
+    </div>
     </div>
   );
 }
