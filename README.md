@@ -20,10 +20,15 @@ Our team was inpsired by the turning point we are entering in our web developmen
 
 ## Installation
 
-To get started, fork this repo into a text editor, then install the node package into your repo using the command line.
+To get started, fork this repo into a text editor, then install the node package into your repo using the command line and add the below text into your server/.env.
 
 ```bash
 npm install
+```
+
+```server/.env
+JWT_SECRET='126433f5d42c19a62f0b0d40104e73b5b4b2c48d8e277fccbc21faed0a56c40c533c33'
+JWT_EXPIRE='15min'
 ```
 
 Once completed, open the main repo file titled `fgp_job_searchify` in the command line by right-clilcking and selecting '*Open in Integrated Terminal*' and enter the following:
@@ -74,7 +79,7 @@ Bootstrap/React-Bootstrap
 
 ## Links 
 
-- [Heroku](insert heroku link here)
+- [Heroku](https://job-searchify-app.herokuapp.com/)
 
 - [GitHub](https://github.com/caitlinscodes/fgp_job_searchify)
 
@@ -83,7 +88,7 @@ Bootstrap/React-Bootstrap
 
 MIT License
 
-Copyright (c) 2022 Dev Wulf, Caitlin Stevenson, Neema Velasco, Emily Vazquez
+Copyright (c) 2022 Inna Arabejo, Matt Jackson, Jonathan Johnson, and Caitlin Stevenson
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
