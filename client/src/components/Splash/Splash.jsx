@@ -68,7 +68,12 @@ function Splash() {
                   My name is Inna Arabejo, and I am an aspiring full stack
                   developer versed in building projects from the ground up with
                   a primary focus on MERN Stack web applications.{" ~ "}
-                  <a href="https://github.com/inna-arabejo">Contact Inna</a>
+                  <a
+                    href="https://github.com/inna-arabejo"
+                    style={{ color: "white" }}
+                  >
+                    Contact Inna
+                  </a>
                 </p>
               </Col>
               <Col>
@@ -76,7 +81,12 @@ function Splash() {
                 <h5>Matt Jackson</h5>
                 <p>
                   Web Developer Currently enrolled at SMU Boot Camp{" ~ "}
-                  <a href="https://github.com/Matt4292">Contact Matt</a>
+                  <a
+                    href="https://github.com/Matt4292"
+                    style={{ color: "white" }}
+                  >
+                    Contact Matt
+                  </a>
                 </p>
               </Col>
               <Col>
@@ -86,7 +96,12 @@ function Splash() {
                   Passionate about writing clean, readable, and reusable code?
                   Interested in building frontend and backend web applications,
                   I also dibble and dabble in robotics.{" ~ "}
-                  <a href="https://github.com/jayBassMan">Contact Jonathan</a>
+                  <a
+                    href="https://github.com/jayBassMan"
+                    style={{ color: "white" }}
+                  >
+                    Contact Jonathan
+                  </a>
                 </p>
               </Col>
               <Col>
@@ -95,7 +110,12 @@ function Splash() {
                 <p>
                   Howdy! I am an experienced professional transitioning into the
                   web development field.{" ~ "}
-                  <a href="https://github.com/caitlinscodes">Contact Caitlin</a>
+                  <a
+                    href="https://github.com/caitlinscodes"
+                    style={{ color: "white" }}
+                  >
+                    Contact Caitlin
+                  </a>
                 </p>
               </Col>
             </Row>
