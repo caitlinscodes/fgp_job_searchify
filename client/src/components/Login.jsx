@@ -1,28 +1,77 @@
-import React from "react";
-import LoginCss from "./login.module.css"
+import React, {useState} from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import ThemeProvider from "react-bootstrap/ThemeProvider";
+import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
+import LoginCss from "./login.module.css";
 
 function Login() {
+  let navigate = useNavigate()
+
+  const [email, setEmail]= useState("");
+  const [password, setPassword]= useState("");
+  const [error, setError]= useState("");
+
+  const loginHandler = async (e) => {
+    e.preventDefault();
+
+    const config = {
+      header: {
+        "Content-Type": "application/json"
+      }
+    }
+
+    try {
+      const {data} = await axios.post("/api/auth/login", {email, password}, config);
+
+      localStorage.setItem("authToken", data.token);
+
+      navigate("/", {replace: true})
+    } catch (error) {
+      setError(error.response.data.error);
+      setTimeout(() => {
+        setError("")
+      }, 5000)
+    }
+
+  }
+
   return (
-    <div class={LoginCss.container}>
-      <div class={LoginCss.card} id={LoginCss.loginCard}>
-        <div class={LoginCss.cardHeader}>
+    <div className="login">
+    <div className={LoginCss.container}>
+      <div className={LoginCss.card} id={LoginCss.loginCard}>
+        <div className={LoginCss.cardHeader}>
           <h1>Login</h1>
         </div>
-        <form class={LoginCss.loginForm}>
-          <div class={LoginCss.loginField}>
-            <label for="username-login">Username</label>
-            <input type="text" class={LoginCss.input} id="usernameLogin" />
+        {error && <span class="errorMessage">{error}</span>}
+        <form onSubmit={loginHandler} className={LoginCss.loginForm}>
+          <div className={LoginCss.loginField}>
+            <label htmlFor="username-login">Email</label>
+            <input 
+              type="email" 
+              className={LoginCss.input} 
+              id="email-login"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)} 
+            />
           </div>
-          <div class={LoginCss.password}>
-            <label for="password-login">Password</label>
-            <input type="password" class={LoginCss.input} id={LoginCss.passwordLogin} />
+          <div className={LoginCss.password}>
+            <label htmlFor="password-login">Password</label>
+            <input 
+              type="password" 
+              className={LoginCss.input} 
+              id="password-login"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)} 
+            />
           </div>
-          <div class={LoginCss.btnDiv}>
-            <button type="submit" class="button is-primary" id={LoginCss.loginBtn}>Login</button>
+          <div className={LoginCss.btnDiv}>
+            <button type="submit" className="btn btn-primary submitBtn" id="loginBtn">Login</button>
           </div>
-          <button id={LoginCss.switchToSignUp} class={LoginCss.switchBtn}>Or Sign Up</button>
+          <button id={LoginCss.switchToSignUp} className={LoginCss.switchBtn}><Link to="/Signup">Or Sign Up</Link></button>
         </form>
       </div>
+    </div>
     </div>
   );
 }

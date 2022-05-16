@@ -41,7 +41,7 @@ const JobResultList = (props) => {
             </Card.Text>
             <Card.Text></Card.Text>
             Salary{" ~ "}
-            <Badge pill variant="success">
+            <Badge pill variant className="success">
               {job.salary}
             </Badge>
             <Card.Text></Card.Text>

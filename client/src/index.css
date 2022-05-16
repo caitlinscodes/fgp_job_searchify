@@ -27,6 +27,14 @@ a:hover {
   background-color: #104e70;
 }
 
+.logoutBtn {
+  background-color: #104e70;
+  border: none
+}
+
+.logoutBtn:focus {
+  outline: none
+}
 
 /* Resume Builder */
 .Resume{
@@ -46,7 +54,8 @@ a:hover {
 }
 .resume-builder {
   margin: 5% 20%;
-  color: #ffc500;
+  background-color: #104e70;
+  color: white;
 }
 legend {
   color: #0072bb;
@@ -69,4 +78,17 @@ footer {
   background-color: #ffc500;
   color: black;
   padding: 30px;
+}
+
+/* Job Search */
+.dashboard {
+  background-color: #104e70;
+  color: white;
+}
+.search-form-results {
+  background-color: #104e70;
+  color: black;
+}
+.prompt {
+  color: white;
 }

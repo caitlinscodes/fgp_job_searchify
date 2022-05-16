@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import React from "react";
+import { Container, Row } from "react-bootstrap";
+import ThemeProvider from "react-bootstrap/ThemeProvider";
 import JobSearchForm from "./JobSearchForm";
 import JobResultList from "./JobResultList";
 import getAllJobs from "../utils/API";
-import { Container } from "react-bootstrap";
+
 
 //Import our search methods
 // import search from '../utils/API';
@@ -74,32 +76,43 @@ const JobSearch = () => {
 
   return (
     <div className="dashboard">
-      <h1 className="font-weight-light">Job Search</h1>
+      {/* <h1 className="font-weight-light">Job Search</h1> */}
+      <ThemeProvider>
       <div className="container">
-        <div className="row align-items-center my-5">
-          <div className="col-lg-5">
-            <h1 className="font-weight-light">Job Search</h1>
-
-            {/* Search bar for Job and Location */}
-            <JobSearchForm
-              searchByJob={searchByJob}
-              searchByLocation={searchByLocation}
-              setSearchByJob={setSearchByJob}
-              setSearchByLocation={setSearchByLocation}
-              searchData={searchData}
-            />
-            {/* Pass our results From JobSearchForm to the JobResultList component to map over  */}
-            <Container className="my-4">
-
-            {filteredResults.length === 0 ? (
-              <div>No Results Found for your Search</div>
-            ) : (
-              <JobResultList results={filteredResults} />
-            )}
+          <Container className="job-page" id="job-page">
+            <Container className="search-form">
+              <br />
+              <br />
+              <br />
+              <h1 className="font-weight-light">Job Search</h1>
+              <Row>
+                <div className="search-form-container">
+                {/* Search bar for Job and Location */}
+                <JobSearchForm
+                  searchByJob={searchByJob}
+                  searchByLocation={searchByLocation}
+                  setSearchByJob={setSearchByJob}
+                  setSearchByLocation={setSearchByLocation}
+                  searchData={searchData}
+                />
+                </div>
+              </Row>
             </Container>
-          </div>
-        </div>
+            <br />
+            <br />
+            {/* Pass our results From JobSearchForm to the JobResultList component to map over  */}
+            <Container className="form-results">
+              <div className="search-form-results">
+              {filteredResults.length === 0 ? (
+                <div className="prompt">No Results Found for your Search</div>
+              ) : (
+                <JobResultList results={filteredResults} />
+              )}
+              </div>
+            </Container>
+          </Container>
       </div>
+      </ThemeProvider>
     </div>
   );
 };

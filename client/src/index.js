@@ -10,11 +10,10 @@ import {
   Home,
   JobSearch,
   Resume,
-  Logout,
-  JobResultList,
+  Login,
+  Signup
 } from "./components";
-import Login from './components/Login.jsx';
-import Signup from './components/Signup';
+import ProtectRoute from "./components/ProtectRoute"
 
 ReactDOM.render(
   <Router>
@@ -22,12 +21,16 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/jobsearch" element={<JobSearch />} />
-     
-      <Route path="/resume-builder" element={<Resume />} />
-      <Route path="/logout" element={<Logout />}/>
+      <Route 
+        path="/resume-builder" 
+        element={
+          <ProtectRoute>
+            <Resume />
+          </ProtectRoute>
+      } />
       <Route path="/login" element={<Login />}/>
-      <Route path="/signup" element={<Signup />}>
-      </Route>
+      <Route path="/signup" element={<Signup />}/>
+
     </Routes>
     <Footer />
   </Router>,
@@ -37,15 +40,4 @@ ReactDOM.render(
 
 serviceWorker.unregister();
 
-{/* // const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>
-// );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
- */}
- reportWebVitals();
+reportWebVitals();

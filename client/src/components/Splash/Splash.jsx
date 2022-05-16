@@ -1,7 +1,9 @@
 import React from  "react";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import ThemeProvider from "react-bootstrap/ThemeProvider";
 // import Type from "./Type";
+import ContactForm from "./ContactForm";
 import Logo from "../../assets/job.searchify_logo2.png";
 import JJohnson from "../../assets/jj_profile.png";
 import MJackson from "../../assets/mj_profile.png";
@@ -9,7 +11,6 @@ import IArabejo from "../../assets/ia_profile.png";
 import CStev from "../../assets/cs_profile.png";
 import JobSearch from "../../assets/jobSearch_img.png";
 import Resume from "../../assets/resume_img.png";
-
 
 function Splash() {
   return (
@@ -68,12 +69,12 @@ function Splash() {
                 <p>
                   My name is Inna Arabejo, and I am an aspiring full stack
                   developer versed in building projects from the ground up with
-                  a primary focus on MERN Stack web applications.{" - "}
+                  a primary focus on MERN Stack web applications.{" ~ "}
                   <a
                     style={{ color: "white" }}
                     href="https://github.com/inna-arabejo"
                   >
-                    Contact
+                    Contact Inna
                   </a>
                 </p>
               </Col>
@@ -81,12 +82,12 @@ function Splash() {
                 <img src={MJackson} alt="placeholder image" />
                 <h5>Matt Jackson</h5>
                 <p>
-                  Web Developer Currently enrolled at SMU Boot Camp{" - "}
+                  Web Developer Currently enrolled at SMU Boot Camp{" ~ "}
                   <a
                     style={{ color: "white" }}
                     href="https://github.com/Matt4292"
                   >
-                    Contact
+                    Contact Matt
                   </a>
                 </p>
               </Col>
@@ -96,12 +97,12 @@ function Splash() {
                 <p>
                   Passionate about writing clean, readable, and reusable code?
                   Interested in building frontend and backend web applications,
-                  I also dibble and dabble in robotics.{" - "}
+                  I also dibble and dabble in robotics.{" ~ "}
                   <a
                     style={{ color: "white" }}
                     href="https://github.com/jayBassMan"
                   >
-                    Contact
+                    Contact Jonathan
                   </a>
                 </p>
               </Col>
@@ -110,12 +111,12 @@ function Splash() {
                 <h5>Caitlin Stevenson</h5>
                 <p>
                   Howdy! I am an experienced professional transitioning into the
-                  web development field.{" - "}
+                  web development field.{" ~ "}
                   <a
                     style={{ color: "white" }}
                     href="https://github.com/caitlinscodes"
                   >
-                    Contact
+                    Contact Caitlin
                   </a>
                 </p>
               </Col>
