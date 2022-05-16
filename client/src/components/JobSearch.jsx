@@ -3,6 +3,7 @@ import React from "react";
 import JobSearchForm from "./JobSearchForm";
 import JobResultList from "./JobResultList";
 import getAllJobs from "../utils/API";
+import { Container } from "react-bootstrap";
 
 //Import our search methods
 // import search from '../utils/API';
@@ -88,12 +89,14 @@ const JobSearch = () => {
               searchData={searchData}
             />
             {/* Pass our results From JobSearchForm to the JobResultList component to map over  */}
+            <Container className="my-4">
 
             {filteredResults.length === 0 ? (
               <div>No Results Found for your Search</div>
             ) : (
               <JobResultList results={filteredResults} />
             )}
+            </Container>
           </div>
         </div>
       </div>
