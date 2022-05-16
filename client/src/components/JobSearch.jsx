@@ -6,6 +6,7 @@ import JobSearchForm from "./JobSearchForm";
 import JobResultList from "./JobResultList";
 import getAllJobs from "../utils/API";
 
+
 //Import our search methods
 // import search from '../utils/API';
 
